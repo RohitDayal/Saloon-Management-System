@@ -1,0 +1,418 @@
+/* Navbar Styling Start */
+.nav-bar {
+  background-color: rgb(255, 166, 0);
+  /* background-color: black; */
+  display: flex;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+.nav-item:first-child {
+  margin-left: 2rem;
+}
+
+.nav-item:first-child a {
+  font-size: x-large;
+  color: #f42f2f;
+}
+
+.nav-item:nth-child(2) {
+  margin-left: 5rem;
+}
+
+.nav-item:last-child {
+  margin-left: auto;
+  margin-right: 2rem;
+  
+}
+.nav-item:last-child a {
+    border: 2.5px solid white;
+      border-radius: 2px;
+      transition: border-color 0.3s ease-in-out;
+      padding: 2px 20px;
+}
+
+.nav-item {
+  margin: 10px;
+  padding: 10px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-size: large;
+}
+
+.nav-item a:hover {
+  color: rgb(217, 238, 243);
+}
+
+@media screen and (max-width: 600px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin: 5px;
+  }
+
+  .nav-item:first-child,
+  .nav-item:nth-child(2),
+  .nav-item:last-child {
+    margin: 0;
+  }
+}
+
+/* Navbar Styling end */
+ 
+.button {
+  font-size: 1rem;
+  padding: 10px;
+  height: 50px;
+  width: auto;
+  border: none;
+  border-radius: 45px;
+  cursor: pointer;
+} 
+.button a{
+  padding: 1rem 3rem;
+  font-weight:580;
+  
+}
+.button:hover {
+  background-color: #2eb7e5;
+  box-shadow: 0px 15px 20px rgba(152, 154, 156, 0.4);
+  color: #fff;
+  transform: translateY(-2px);
+ 
+}
+
+/* Hero-banner styling start */
+.hero-banner{
+  display: grid;
+  gap: 20px;
+}
+@media (min-width: 600px) {
+  .hero-banner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.hero-left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+}
+.hero-right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+}
+.hero-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+
+
+
+
+
+/* Authentication Styling start */
+
+.Auth-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100vw; */
+  /* height: 100vh; */
+}
+
+.Auth-form {
+  width: 420px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  background-color: white;
+}
+.Auth-btn{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.Auth-form-content {
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.Auth-form-title {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 24px;
+  color: rgb(34, 34, 34);
+  font-weight: 800;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+}
+
+
+.toggle-btn {
+  margin-top: 5px;
+  font-size: 1rem;
+  padding: 10px;
+  height: 50px;
+  width: 160px;
+  border: none;
+  background-color:inherit;
+  cursor: pointer;
+}
+
+.login-board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem;
+  background-color: #F2F3F5;
+
+}
+
+/* Authentication Styling end */
+
+/* About - Top- Banner Styling start */
+
+.top-banner{
+  color:white;
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-inner-banner h1 {
+    font-size: 50px;
+    text-align: center;
+}
+.top-inner-banner p{
+  text-align: center;
+  margin-top: 20px;
+  font-size: larger;
+}
+
+.about-section{
+    display: flex;
+}
+.about-section > div{
+  flex: 1;
+  padding: 1.8rem;
+  margin-top: 5rem;
+
+}
+.about-section-left h4{
+  color: rgb(112, 110, 110);
+}
+.about-section-left h1{
+  font-weight: bolder;
+  color: rgb(72, 68, 68);
+}
+.about-section-left p{
+  color: rgb(98, 93, 93);
+  line-height: 1.6;
+  font-size: large;
+  margin: 40px 0px;
+}
+.about-section-right p{
+  color: rgb(98, 93, 93);
+  line-height: 1.6;
+  font-size: large;
+  margin: 40px 0px;
+}
+.about-image-left img{
+  width: 90%;
+  height: auto;
+  display: block;
+
+}
+.about-image-right img{
+  width: 95%;
+  height: auto;
+  display: block;
+}
+/* Service-list-container styling start */
+
+.service-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+.ser-cont-item{
+    /* background-color: #e0e0e0; */
+    padding: 2.5rem;
+    /* text-align: center; */
+}
+.ser-cont-item > h2{
+  margin: 4rem 2rem 3rem 0;
+}
+/* Services gallery styling start  */
+.img-container img:hover{
+     transform: scale(1.1);
+     transition-duration: 0.4s;
+     cursor: pointer;
+}
+.gallery-container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding: 2.5rem 5rem;
+}
+
+/* Service icon  */
+.service-icon-top-sec {
+  text-align: center;
+}
+.service-icon-top-sec > h1{
+  font-size:48px;
+}
+.service-icon-top-sec p:last-child{
+  padding: 2% 20%;
+  color: rgb(104, 100, 100);
+}
+
+.service-icon-bottom {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  width: 100%;
+  padding: 5% 10%;
+}
+.service-icon-bottom div{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.service-icon{
+  width: 50%;
+  height: auto;
+  display:block;
+
+}
+
+/* -------------------------------------------------------------- */
+/* Schedule component start */
+.schedule-container {
+  max-width: 800px;
+  /* Adjust as needed */
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+}
+
+.left-column {
+  flex: 1;
+}
+
+.right-column {
+  flex: 1;
+}
+
+.schedule {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.day,
+.time {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.time-schedule {
+  margin-top: 20px;
+}
+
+.time-schedule h3,
+.time-schedule h4,
+.time-schedule p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .schedule {
+    grid-template-columns: 1fr;
+  }
+}
+/* schedule component ends */
+/* ------------------------------------------ */
+
+/* BookingPage component start */
+.booking-container {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.booking-heading {
+  text-align: center;
+}
+
+.booking-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+.form-input:focus {
+  border-color: #007bff;
+  outline: none;
+  /* Remove default browser outline */
+  box-shadow: 0 0 2px #007bff;
+  /* Feathered effect */
+}
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+/* BookingPage component end */
