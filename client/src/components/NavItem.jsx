@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const NavItem = (props) => {
   return (
     <div className='nav-item'>
-    <Link to= {props.to} >{props.name}</Link>
+    <Link to= {props.to} className="nav-link" >{props.name}</Link>
     </div>
   )
 }

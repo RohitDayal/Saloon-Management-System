@@ -1,16 +1,12 @@
 import React from "react";
 import TopBanner from "../components/TopBanner";
 import MiddleAbout from "../components/MiddleAbout";
-import Button from "../components/Button";
+// import Button from "../components/Button";
 import ImageGallery from "../components/ImageGallery";
 import ServiceIcon from "../components/ServiceIcon";
+import { Link } from "react-router-dom";
 
 const About = () => {
-    const styleBtn = {
-    textAlign: "center",
-    padding: "4rem",
-  };
-  
   return (
     <>
       <TopBanner
@@ -19,25 +15,21 @@ const About = () => {
         imageUrl="linear-gradient(rgba(4,9,30,0.3), rgba(4,9,30,0.2)), url('/assets/images/about-banner.jpg')"
       />
       <MiddleAbout />
-      <div style={styleBtn}>
-        <Button
-          route="/book"
-          name="BOOK APPOINTMENT"
-          bgColor="white"
-          color="black"
-        />
+
+      <div className="text-center text-light py-5 m-3">
+        <Link to="/book" className="salon-menu-btn shadow">
+          BOOK APPOINTMENT
+        </Link>
       </div>
 
-      <ImageGallery/>
-      <div style={styleBtn}>
-        <Button
-          route="/gallery"
-          name="VISIT OUR GALLERY"
-          bgColor="white"
-          color="black"
-        />
+      <ImageGallery />
+      <div className="text-center text-light py-5 m-3">
+        <Link to="/gallery" className=" visit-our-gallery-btn shadow ">
+          VISIT OUR GALLERY
+        </Link>
       </div>
-      <ServiceIcon/>
+
+      <ServiceIcon />
     </>
   );
 };

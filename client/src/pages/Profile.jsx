@@ -7,18 +7,20 @@ const Profile = () => {
   const handleLogout = () => {
     logout();
   };
+  // console.log(userInfo.name);
   if (!userInfo) {
     return <Navigate to="/login" />;
   }
   return (
-    <div>
+    <div className="profile-section">
       <h1>Profile</h1>
 
       {userInfo ? (
         <div>
-          <p>Name: {userInfo.Name}</p>
-          <p>UserName: {userInfo.UserName}</p>
-          <p>Email: {userInfo.Email}</p>
+          <img src={userInfo.picture} alt={userInfo.name} />
+          <p>Name: {userInfo.Name || userInfo.name}</p>
+          <p>UserName: {userInfo.UserName || userInfo.given_name}</p>
+          <p>Email: {userInfo.Email || userInfo.email}</p>
           {/* Add other user information as needed */}
         </div>
       ) : (

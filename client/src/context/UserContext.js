@@ -15,6 +15,7 @@ const UserContextProvider = ({ children }) => {
   const logout = () => {
     // Clear user authentication information from storage
     localStorage.removeItem("userInfo");
+    localStorage.removeItem("token");
     // Reset userInfo state
     setUserInfo(null);
   };

@@ -1,16 +1,26 @@
-import React, { useContext, useState } from "react";
-import { Navigate } from "react-router-dom";
+import React, { useContext, useState, useEffect } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+
 import { UserContext } from "../context/UserContext"; // Importing UserContext
 
 export default function LoginForm() {
   const [mail, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [redirect, setRedirect] = useState(false);
   const { userInfo, setUserInfo } = useContext(UserContext); // Using useContext with UserContext
+  const navigate = useNavigate(); // Using useNavigate for navigation
+  const location = useLocation(); // Using useLocation to get current location
+
+  const from = location.state?.from?.pathname || "/"; // Default to home if no previous location
+
+  useEffect(() => {
+    if (userInfo) {
+      navigate(from, { replace: true }); // Navigate to previous page or default page
+    }
+  }, [userInfo, navigate, from]);
 
   async function login(ev) {
     ev.preventDefault();
-    const response = await fetch("http://localhost:5000/login", {
+    const response = await fetch("http://localhost:5000/users/login", {
       method: "POST",
       body: JSON.stringify({ mail, password }),
       headers: { "Content-Type": "application/json" },
@@ -18,16 +28,11 @@ export default function LoginForm() {
 
     if (response.ok) {
       const data = await response.json();
-      // console.log(data.user);
       setUserInfo(data.user);
-      setRedirect(true);
+      localStorage.setItem("token", data.token);
     } else {
       alert("Wrong credentials or user doesn't exist");
     }
-  }
-
-  if (redirect) {
-    return <Navigate to="/about" />;
   }
 
   return (
@@ -41,6 +46,7 @@ export default function LoginForm() {
               type="email"
               className="form-control mt-1"
               placeholder="Enter email"
+              required
               value={mail}
               onChange={(ev) => setUsername(ev.target.value)}
             />
@@ -51,6 +57,7 @@ export default function LoginForm() {
               type="password"
               className="form-control mt-1"
               placeholder="Enter password"
+              required
               value={password}
               onChange={(ev) => setPassword(ev.target.value)}
             />
@@ -61,7 +68,9 @@ export default function LoginForm() {
             </button>
           </div>
           <p className="forgot-password text-right mt-2">
-            Forgot <a href="#">password?</a>
+            <Link to="/forget-password" className="text-primary">
+              Forget password?
+            </Link>
           </p>
         </div>
       </form>

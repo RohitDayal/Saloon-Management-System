@@ -1,35 +1,35 @@
-import React from 'react'
-import Listitem from './Listitem';
-import Button from './Button';
+import React from "react";
+import Listitem from "./Listitem";
+// import Button from './Button';
 // Your data as a JavaScript object
 const cuttingStyling = [
   {
-    name: 'Oxygen Blast Facial',
+    name: "Oxygen Blast Facial",
     price: 240,
     duration: 60,
   },
   {
-    name: 'Oxygen Blast Facial',
+    name: "Oxygen Blast Facial",
     price: 240,
     duration: 60,
   },
   {
-    name: 'Eyebrow Shaping',
-    price: '50 - $97',
+    name: "Eyebrow Shaping",
+    price: "50 - $97",
     duration: 90,
   },
   {
-    name: 'Eyebrow Shaping',
-    price: '50 - $97',
+    name: "Eyebrow Shaping",
+    price: "50 - $97",
     duration: 90,
   },
   {
-    name: 'Four Layer Facial',
+    name: "Four Layer Facial",
     price: 140,
     duration: 90,
   },
   {
-    name: 'Four Layer Facial',
+    name: "Four Layer Facial",
     price: 140,
     duration: 90,
   },
@@ -79,75 +79,84 @@ const hairTreatment = [
 
 const hairColouring = [
   {
-    name: 'Organic Facial',
+    name: "Organic Facial",
     price: 185,
-    duration: '1.5 hours',
+    duration: "1.5 hours",
   },
   {
-    name: 'Eyelash Tinting',
+    name: "Eyelash Tinting",
     price: 25,
-    duration: '2 hours',
+    duration: "2 hours",
   },
   {
-    name: 'Deep Cleaning Facial',
-    price: '130+',
-    duration: '55 minutes',
+    name: "Deep Cleaning Facial",
+    price: "130+",
+    duration: "55 minutes",
   },
   {
-    name: 'Eyelash Tinting',
+    name: "Eyelash Tinting",
     price: 25,
-    duration: '2 hours',
+    duration: "2 hours",
   },
   {
-    name: 'Deep Cleaning Facial',
-    price: '130+',
-    duration: '55 minutes',
+    name: "Deep Cleaning Facial",
+    price: "130+",
+    duration: "55 minutes",
   },
 ];
 const hairExtensions = [
   {
-    name: 'Organic Facial',
+    name: "Organic Facial",
     price: 185,
-    duration: '1.5 hours',
+    duration: "1.5 hours",
   },
   {
-    name: 'Eyelash Tinting',
+    name: "Eyelash Tinting",
     price: 25,
-    duration: '2 hours',
+    duration: "2 hours",
   },
   {
-    name: 'Deep Cleaning Facial',
-    price: '130+',
-    duration: '55 minutes',
+    name: "Deep Cleaning Facial",
+    price: "130+",
+    duration: "55 minutes",
   },
 ];
-
 
 const ServiceList = () => {
   return (
     <>
-    <div className="service-container">
-      <div className="ser-cont-item">
-        <h2>Cutting & Styling</h2>
-        <Listitem servicesData={cuttingStyling} />
-      </div>
-      <div className="ser-cont-item">
-        <h2>Hair Treatments</h2>
-        <Listitem servicesData={hairTreatment} />
-      </div>
-      <div className="ser-cont-item">
-        <h2>Hair Colouring</h2>
-        <Listitem servicesData={hairColouring} />
-      </div>
-      <div className="ser-cont-item">
-        <h2>Hair Extensions</h2>
-        <Listitem servicesData={hairExtensions} />
-      </div>
-    </div>
+      <div className="service-container"></div>
 
-   
+      <div className="container">
+        <div className="row">
+          <div className="col-12  col-md-6 col-lg-6">
+            <div className="ser-cont-item">
+              <h2>Cutting & Styling</h2>
+              <Listitem servicesData={cuttingStyling} />
+            </div>
+          </div>
+          <div className="col-12  col-md-6 col-lg-6">
+            <div className="ser-cont-item">
+              <h2>Hair Treatments</h2>
+              <Listitem servicesData={hairTreatment} />
+            </div>
+          </div>
+          <div className="col-12  col-md-6 col-lg-6">
+            <div className="ser-cont-item">
+              <h2>Hair Colouring</h2>
+              <Listitem servicesData={hairColouring} />
+            </div>
+          </div>
+          <div className="col-12  col-md-6 col-lg-6">
+            <div className="ser-cont-item">
+              <h2>Hair Extensions</h2>
+              <Listitem servicesData={hairExtensions} />
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
-}
+};
 
-export default ServiceList
+export default ServiceList;
